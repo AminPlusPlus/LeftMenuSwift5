@@ -23,6 +23,7 @@ class ContainerViewController: UIViewController,ViewControllerDelegate {
         configureMainViewController()
     }
     
+    //main view
     private func configureMainViewController () {
         mainViewController = ViewController()
         addChild(mainViewController)
@@ -32,6 +33,7 @@ class ContainerViewController: UIViewController,ViewControllerDelegate {
         
     }
     
+    //left menu
     private func configureMenuViewController() {
         leftMenuViewController = LeftMenuViewController()
         addChild(leftMenuViewController)
@@ -42,6 +44,7 @@ class ContainerViewController: UIViewController,ViewControllerDelegate {
     private func showMenuViewController (shoudMove : Bool){
         if shoudMove {
     
+            //open aniamtion
             UIView.animate(withDuration: 0.5,
                 delay: 0,
                 usingSpringWithDamping: 0.8,
@@ -56,9 +59,10 @@ class ContainerViewController: UIViewController,ViewControllerDelegate {
         
         } else  {
             
+            //close animation
             UIView.animate(withDuration: 0.5,
                            delay: 0,
-                           usingSpringWithDamping: 0.8,
+                           usingSpringWithDamping: 1,
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {

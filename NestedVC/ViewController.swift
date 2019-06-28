@@ -10,6 +10,7 @@ import UIKit
 
 protocol ViewControllerDelegate  {
     func toggleMenu()
+   // func closeLeftMenu()
 }
 
 class ViewController: UIViewController {
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
         btnMenuToggle.addTarget(self, action: #selector(menuOpen), for: .touchUpInside)
         
         view.addSubview(btnMenuToggle)
+        
+       // let tabGesture
     }
     
     
